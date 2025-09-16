@@ -1,12 +1,10 @@
-export {};
-
 /**
  * Recursively removes unsafe MongoDB keys from objects and arrays.
  *
  * @param {any} value - Input data (object, array, or primitive)
  * @returns {any} - Cleaned copy with unsafe keys removed
  */
-export function cleanMongoKeys(value) {
+function cleanMongoKeys(value) {
 	if (Array.isArray(value)) {
 		return value.map(cleanMongoKeys);
 	}
@@ -46,7 +44,7 @@ export function cleanMongoKeys(value) {
  * @param {import('express').Response} res
  * @param {import('express').NextFunction} next
  */
-export function cleanMongoMiddleware(req, res, next) {
+function cleanMongoMiddleware(req, res, next) {
 	req.body = cleanMongoKeys(req.body);
 	req.query = cleanMongoKeys(req.query);
 	req.params = cleanMongoKeys(req.params);
@@ -54,3 +52,8 @@ export function cleanMongoMiddleware(req, res, next) {
 
 	next();
 }
+
+module.exports = {
+	cleanMongoKeys,
+	cleanMongoMiddleware,
+};

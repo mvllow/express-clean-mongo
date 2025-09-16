@@ -9,7 +9,7 @@
 		"name": "mvllow",
 		"email": "mvllow@icloud.com"
 	},
-	"type": "module",
+	"type": "commonjs",
 	"main": "index.js",
 	"types": "index.d.ts",
 	"engines": {

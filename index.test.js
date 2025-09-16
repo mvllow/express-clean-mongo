@@ -1,6 +1,6 @@
-import test from "node:test";
-import assert from "assert";
-import { cleanMongoKeys, cleanMongoMiddleware } from "./index.js";
+const test = require("node:test");
+const assert = require("assert");
+const { cleanMongoKeys, cleanMongoMiddleware } = require("./index.js");
 
 test("cleanMongoKeys removes keys starting with $ and containing .", () => {
 	const input = {
