@@ -1,6 +1,6 @@
 {
 	"name": "express-clean-mongo",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"description": "Express middleware to clean MongoDB requests",
 	"license": "MIT",
 	"repository": "https://github.com/mvllow/express-clean-mongo",
