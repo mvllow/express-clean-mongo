@@ -1,3 +1,5 @@
+export {};
+
 /**
  * Recursively removes unsafe MongoDB keys from objects and arrays.
  *
